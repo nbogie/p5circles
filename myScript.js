@@ -1,7 +1,16 @@
-//console.log("hello");
+function setup() {
+  createCanvas(600, 400);
+  noLoop();
+}
 function draw() {
-  circle(20, 40, 30);
-  circle(20, 40, 20);
-  circle(20, 40, 10);
-  circle(20, 40, 5);
+  background("linen");
+
+  let diameter = width;
+  const x = width / 2;
+  const y = height / 2;
+  while (diameter > 0) {
+    fill(random(0, 255));
+    circle(x, y, diameter);
+    diameter = diameter - 20;
+  }
 }
