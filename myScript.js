@@ -5,13 +5,15 @@ function setup() {
 }
 function draw() {
   background("linen");
+  for (let i = 0; i < 5; i++) {
+    drawRingSet(random(0, width), random(0, height), random(100, width / 2));
+  }
+}
 
-  let diameter = width;
-  const x = width / 2;
-  const y = height / 2;
+function drawRingSet(x, y, diameter) {
   while (diameter > 0) {
     fill(random(0, 255));
-    square(x, y, diameter);
+    circle(x, y, diameter);
     diameter = diameter - 20;
   }
 }
